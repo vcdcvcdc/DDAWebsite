@@ -68,10 +68,9 @@ function pixelExtraction() {
     webgl.texture.magFilter = THREE.LinearFilter;
     webgl.texture.format = THREE.RGBFormat;
 
-    webgl.width = webgl.texture.image.width;
-    webgl.height = webgl.texture.image.height;
- 
-    webgl.totalPoints = webgl.width * webgl.height;
+    webgl.width = webgl.texture.image.width * 10; // Increase the width by 10 times
+    webgl.height = webgl.texture.image.height * 10; // Increase the height by 10 times
+    webgl.totalPoints = webgl.width * webgl.height; // This will increase the total points or particles by 100 times
  
     if (webgl.phase == "video") {
         webgl.visiblePoints = webgl.totalPoints;
@@ -105,7 +104,7 @@ function initParticles() {
     const geometryParticles = new THREE.InstancedBufferGeometry();
 
     const positions = new THREE.BufferAttribute(new Float32Array(4 * 3), 3);
-    positions.setXYZ(0, -0.1, 0.1, 0.0);
+    positions.setXYZ(0, -0.5, 0.5, 0.0);
     positions.setXYZ(1, 0.5, 0.5, 0.0);
     positions.setXYZ(2, -0.5, -0.5, 0.0);
     positions.setXYZ(3, 0.5, -0.5, 0.0);
@@ -144,7 +143,7 @@ function initParticles() {
         uTime: { value: 0 },          
         uRandom: { value: 100.0 },   
         uDepth: { value: 1000.0 },   
-        uSize: { value: 0.1 },  
+        uSize: { value: 0.01 },  
         uTextureSize: { value: new THREE.Vector2(webgl.width, webgl.height) },  
         uTexture: { value: webgl.texture },                    
         uTouch: { value: null },                                
