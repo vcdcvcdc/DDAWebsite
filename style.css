@@ -1,0 +1,278 @@
+
+html, body {margin:0; overflow:hidden; height: 100%;}
+
+#container {
+    height: 100%;
+  }
+
+#darkMatter {
+    width: 8vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 3;
+    display: none;
+}
+
+#animContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+  
+#products {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #products canvas {
+    width: 150%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    #products {
+      width: 120vw;
+    }
+    
+    #products canvas {
+      width: 150%;
+      height: auto;
+    }
+  }
+
+
+
+
+section#products {
+  overflow: scroll;
+  height: calc(100vh - 180px);
+}
+
+canvas {
+  top: 0;
+  position: fixed;
+  z-index: 0;
+}
+
+header,
+section#products {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+section#products {
+  transform: scale(0.8) translateX(-75vw) translateY(-100px);
+  height: calc(100vh - 50px);
+}
+
+}
+
+
+section#products {
+  display: block;
+  width: 1060px;
+  height: 210px;
+  overflow: scroll;
+}
+
+.product-block {
+  width: calc(25% - 12px) !important;
+  float: left;
+  margin: 5px;
+}
+
+#products {
+  position: fixed;
+  bottom: 0;
+  top: auto;
+}
+
+img#darkMatter {
+  display: block;
+  animation: darkMatter 1.618s linear infinite alternate;
+  z-index: 99;
+}
+
+@keyframes darkMatter {
+  0% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 0 whitesmoke;
+  }
+  100% {
+    opacity: 0.9;
+    box-shadow: 0 0 70px 0 purple;
+  }
+}
+
+img#darkMatter {
+  border-radius: 170px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+img#darkMatter:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(240, 255, 255, 0.325);
+  padding: 10px;
+}
+
+/* 
+img#darkMatter {
+  display: none;
+} */
+
+#products > div > h2 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+.product-block {
+  background: transparent;
+  border-color: white;
+  color: white;
+  border-radius: 0 !important
+}
+
+#products > div > h2 {
+  width: calc(25% - 50px) !important;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  position: absolute;
+  text-shadow: 2px 3px 5px black;
+}
+
+.product-block {
+  height: 145px;
+  position: relative;
+}
+
+.product-block {
+  position: relative !important;
+  display: block !important;
+  float: left !important;
+  overflow: scroll !important;
+  left: 0 !important;
+  width: 255px !important;
+  transition: all 0.5s ease-in-out;
+}
+
+section#products {
+  display: block;
+  width: 1080px;
+  height: 210px;
+  overflow: scroll;
+  left: auto;
+  right: auto;
+  transform: none;
+  margin: auto;
+}
+
+section#products {
+  bottom: auto;
+  position: relative;
+}
+
+div#scrollable {
+  overflow: scroll;
+  display: block;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+
+.product-block:hover {
+  transform: scale(0.9);
+}
+
+
+img#darkMatter {
+  width: 300px;
+  margin-top: 140px;
+}
+
+#scrollable > h6 {
+  color: white;
+  padding: 0 10px;
+  margin: 0 0 10px;
+  animation: bounceToRight 1.618s linear alternate 3;
+}
+
+@keyframes bounceToRight {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+div#info-btn {
+  background: white;
+  z-index: 99;
+  position: fixed;
+  padding: 10px;
+  font-family: cursive;
+  right: 10px;
+  cursor: pointer;
+}
+
+div#info-btn:hover {
+  background: #7f632c;
+  color: white;
+}
+
+div#info-container {
+  z-index: 999;
+  position: relative;
+  color: white;
+  background: #17201b;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  margin: 80px auto;
+  display: none;
+}
+
+div#info-container {
+  height: 75vh;
+  overflow: scroll;
+  border: solid;
+  padding: 15px;
+}
+
+div#info-container {
+  font-size: 13px;
+}
+
+#info-container > h6 {
+  font-size: 15px;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
