@@ -28,7 +28,7 @@ let tail = {};
 function setup() {
     pixelExtraction();
 
-    if (webgl.phase == "video") webgl.threshold = 128;
+    if (webgl.phase == "video") webgl.threshold = -1;
     initParticles();
 
     
@@ -72,7 +72,7 @@ function pixelExtraction() {
     }
 
     webgl.visiblePoints = 0;
-    webgl.threshold = 60; 
+    webgl.threshold = 128; 
 
     const img = webgl.texture.image;
     const canvas = document.createElement('canvas');
