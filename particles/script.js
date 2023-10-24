@@ -20,22 +20,14 @@ let tail = {};
     webgl.phase = "wall";
 
     webgl.loader = new THREE.TextureLoader();
-    //webgl.texture = webgl.loader.load('../logo.png', setup); 
-   
-    // Look up video element 
-webgl.video = document.getElementById('video');
-
-// Create video texture
-webgl.texture = new THREE.VideoTexture(webgl.video);
+    webgl.texture = webgl.loader.load('../logo.png', setup); 
 })();
 
 
 
 function setup() {
-    //pixelExtraction();
+    pixelExtraction();
 
-// Set threshold to show all pixels  
-webgl.threshold = -1;
     if (webgl.phase == "video") webgl.threshold = -1;
     initParticles();
 
@@ -68,9 +60,10 @@ function pixelExtraction() {
     webgl.texture.magFilter = THREE.LinearFilter;
     webgl.texture.format = THREE.RGBFormat;
 
-    webgl.width = webgl.texture.image.width * 10; // Increase the width by 10 times
-    webgl.height = webgl.texture.image.height * 10; // Increase the height by 10 times
-    webgl.totalPoints = webgl.width * webgl.height; // This will increase the total points or particles by 100 times
+    webgl.width = webgl.texture.image.width;
+    webgl.height = webgl.texture.image.height;
+ 
+    webgl.totalPoints = webgl.width * webgl.height;
  
     if (webgl.phase == "video") {
         webgl.visiblePoints = webgl.totalPoints;
@@ -141,9 +134,9 @@ function initParticles() {
 
     const uniforms = {
         uTime: { value: 0 },          
-        uRandom: { value: 100.0 },   
+        uRandom: { value: 2.0 },   
         uDepth: { value: 1000.0 },   
-        uSize: { value: 0.01 },  
+        uSize: { value: 0.1 },  
         uTextureSize: { value: new THREE.Vector2(webgl.width, webgl.height) },  
         uTexture: { value: webgl.texture },                    
         uTouch: { value: null },                                
