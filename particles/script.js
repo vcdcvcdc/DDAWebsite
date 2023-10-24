@@ -105,7 +105,7 @@ function initParticles() {
     const geometryParticles = new THREE.InstancedBufferGeometry();
 
     const positions = new THREE.BufferAttribute(new Float32Array(4 * 3), 3);
-    positions.setXYZ(0, -0.5, 0.5, 0.0);
+    positions.setXYZ(0, -0.1, 0.1, 0.0);
     positions.setXYZ(1, 0.5, 0.5, 0.0);
     positions.setXYZ(2, -0.5, -0.5, 0.0);
     positions.setXYZ(3, 0.5, -0.5, 0.0);
