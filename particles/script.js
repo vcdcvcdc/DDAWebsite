@@ -28,7 +28,7 @@ let tail = {};
 function setup() {
     pixelExtraction();
 
-    if (webgl.phase == "video") webgl.threshold = -1;
+    if (webgl.phase == "video") webgl.threshold = 128;
     initParticles();
 
     
