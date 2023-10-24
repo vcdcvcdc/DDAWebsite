@@ -135,8 +135,8 @@ function initParticles() {
     const uniforms = {
         uTime: { value: 0 },          
         uRandom: { value: 2.0 },   
-        uDepth: { value: 40.0 },   
-        uSize: { value: 2.0 },  
+        uDepth: { value: 5.0 },   
+        uSize: { value: 0.1 },  
         uTextureSize: { value: new THREE.Vector2(webgl.width, webgl.height) },  
         uTexture: { value: webgl.texture },                    
         uTouch: { value: null },                                
