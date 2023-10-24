@@ -75,7 +75,7 @@ var camera, scene, renderer;
 				let darkMatter = document.getElementById("darkMatter");
 				darkMatter.addEventListener('click', ()=> {
 					console.log("click");
-					window.location.href = "DDAWebsite/particles/index.html";
+					window.location.href = "particles/index.html";
 				})
 
 				textAnimation();
