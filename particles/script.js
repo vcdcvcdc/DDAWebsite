@@ -135,14 +135,14 @@ function initParticles() {
     const uniforms = {
         uTime: { value: 0 },          
         uRandom: { value: 2.0 },   
-        uDepth: { value: 40.0 },   
-        uSize: { value: 2.0 },  
+        uDepth: { value: 50.0 },   
+        uSize: { value: 0.1 },  
         uTextureSize: { value: new THREE.Vector2(webgl.width, webgl.height) },  
         uTexture: { value: webgl.texture },                    
         uTouch: { value: null },                                
         uAlphaCircle: { value: 0.0 },   
-        uAlphaSquare: { value: 1.0 },  
-        uCircleORsquare: { value: 0.0 },
+        uAlphaSquare: { value: 0.0 },  
+        uCircleORsquare: { value: 1.0 },
     };
 
     const materialParticles = new THREE.RawShaderMaterial({
