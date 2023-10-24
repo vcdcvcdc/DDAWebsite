@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../logo.png" type="image/x-icon" />
+  <title>Digital Dollar Association</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" user-scalable="yes">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div id="wrapper">
+
+    <div id="bg"></div>
+
+    <div id="canvas_container"></div>
+
+    <video id="video" playsinline webkit-playsinline muted loop  width="280" height="108" crossorigin="anonymous"
+        src="" style="display: none;"></video>
+  
+    <!-- <p class="text">click to break it!</p> -->
+
+    <button class="btn no-click" id="fullscr">Go Fullscreen</button>
+
+    <!-- back button -->
+    <div class="back">
+        <a href="/index.html" class="no-click">
+            <!-- back arrow -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.854 4.146a.5.5 0 010 .708L8.707 8l3.147 3.146a.5.5 0 11-.708.708l-3.5-3.5a.5.5
+                    0 010-.708l3.5-3.5a.5.5 0 01.708 0z"
+                    clip-rule="evenodd" />
+            </svg>
+        </a>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'></script>
+<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script  src="/particles/script.js"></script>
+
+<script src="https://releases.jquery.com/git/jquery-git.slim.min.js"></script>
+<script>
+      // on document ready
+      $(document).ready(function () {
+        setTimeout(function () {
+          $('#wrapper').click()
+        }, 1000);
+
+        var random = Math.floor(Math.random() * 4);
+        var video = document.getElementById('video');
+        video.src = '/dda-videos/' + random + '.mp4';
+
+    });
+</script>
+
+</body>
+</html>
